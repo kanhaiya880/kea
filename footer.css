@@ -1,0 +1,55 @@
+:root {
+  --primary: #000000;
+}
+
+.footer {
+  color: #ffffff;
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #B0B9AE;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  color: var(--light);
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.container-fluid.bg-dark.footer {
+  background-image: linear-gradient(135deg, #FD6E6A 10%, #FFC600 100%) !important;
+}
+
+.container-fluid.bg-dark.footer a {
+  color: #ffffff;
+}
+
+.container-fluid.bg-dark.footer a:hover {
+  color: var(--primary);
+}
+
+.container-fluid.copyright {
+  background: #000000;
+  color: #B0B9AE;
+
+}
+
+.container-fluid.copyright a:hover {
+  color: var(--primary) !important;
+}

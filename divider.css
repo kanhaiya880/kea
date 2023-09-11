@@ -1,0 +1,97 @@
+ .divider {
+   display: flex;
+   column-gap: 20px;
+ }
+
+ .divider span {
+   font-size: 30px;
+
+   font-family: 'EB Garamond', serif;
+   font-family: 'Noto Serif', serif;
+   font-family: 'Roboto Slab', serif;
+ }
+
+ .divider>.design-line {
+   position: relative;
+   display: flex;
+   width: 18px;
+   height: 40px;
+   background-color: transparent !important;
+
+ }
+
+
+
+
+
+ .design-line>yello {
+   width: 6px;
+   height: 100%;
+   background-color: #001f99;
+   animation-name: dy;
+   animation-duration: 0.60s;
+   animation-timing-function: linear;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+ }
+
+ .design-line>blue {
+   width: 6px;
+   height: 100%;
+   background-color: #2bff00;
+   animation-name: db;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+ }
+
+
+
+ @keyframes dy {
+   0% {
+
+     height: 10%;
+   }
+
+
+
+   100% {
+     height: 100%;
+     left: 150px;
+     top: 0px;
+   }
+ }
+
+ @keyframes db {
+   0% {
+
+     height: 10%;
+   }
+
+
+
+   100% {
+     height: 100%;
+     left: 150px;
+     top: 0px;
+   }
+ }
+
+
+ @media screen and (max-width:600px) {
+   .divider span {
+     font-size: 20px;
+
+   }
+
+   .divider>.design-line {
+     position: relative;
+     width: 18px;
+     height: 44px;
+     background-color: blue;
+   }
+
+ }

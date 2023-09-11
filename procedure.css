@@ -1,0 +1,94 @@
+#circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: rgb(0, 0, 0) !important;
+  color: white;
+
+}
+
+.bg-primary {
+  background: rgb(255, 220, 242);
+  background: linear-gradient(90deg, rgb(255, 220, 244) 30%, rgb(213, 247, 255) 100%) !important;
+  z-index: 0;
+}
+
+.procedure>ul>li {
+
+  display: flex;
+  list-style-type: none;
+  column-gap: 30px;
+  padding-bottom: 5px;
+
+
+  font-family: 'Noto Serif', serif;
+  font-family: 'Roboto Slab', serif;
+
+
+}
+
+.vertical-line {
+  width: 0;
+  height: 100%;
+  /* Adjust the height of the line as per your requirement */
+  position: relative;
+  z-index: 0;
+}
+
+.vertical-line::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  margin-left: 20px;
+
+
+  transform: translateX(-50%);
+  width: 3px;
+  /* Adjust the width of the line as per your requirement */
+  height: 100%;
+  /* Adjust the height of the line as per your requirement */
+  background-color: rgb(0, 0, 0);
+  /* Change the color as per your requirement */
+}
+
+.section-title {
+  width: 85%;
+  position: relative;
+  margin-left: 38px;
+  margin-bottom: 40px;
+  font-family: 'Caprasimo', cursive;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Roboto Slab', serif;
+}
+
+.section-title>.divider-design {
+  margin-top: 20px;
+  width: 150px;
+  height: 7px;
+  background-color: rgb(47, 106, 140);
+  border-radius: 10px;
+
+
+}
+
+.mybtn {
+  border-radius: 20px;
+  background-color: rgb(86, 86, 255);
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-bottom: 10px;
+  border: solid 2px !important;
+}
+
+#procedure {
+  color: rgb(81, 81, 81);
+  text-shadow: none;
+}

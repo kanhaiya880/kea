@@ -1,0 +1,70 @@
+.navbar-brand span {
+  font-family: 'Caprasimo', cursive;
+  font-family: 'EB Garamond', serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'Roboto Slab', serif;
+
+}
+
+.navbar-toggler {
+  width: 3rem;
+  outline: none;
+  border: none;
+  color: white;
+
+}
+
+.navbar-toggler:hover {
+  text-align: center;
+
+}
+
+.navbar-toggler {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar-brand img {
+  width: 80px;
+
+}
+
+
+.nav-link {
+  font-family: 'Heebo', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.nav-link:hover {
+  color: blueviolet !important;
+}
+
+@media screen and (max-width:600px) {
+  .navbar-brand span {
+    font-size: 20px;
+
+  }
+
+  .navbar-brand img {
+    width: 50px;
+
+  }
+}
+
+@media screen and (max-width:391px) {
+  .navbar-brand span {
+    font-size: 15px;
+
+  }
+
+  .navbar-brand img {
+    width: 40px;
+
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+
+}
