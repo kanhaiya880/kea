@@ -53,6 +53,19 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
+    /* spinner */
+    #spinner {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s ease-out, visibility 0s linear .5s;
+      z-index: 99999;
+    }
+
+    #spinner.show {
+      transition: opacity .5s ease-out, visibility 0s linear 0s;
+      visibility: visible;
+      opacity: 1;
+    }
     /* service box css */
 
     .service-box .box {
@@ -78,6 +91,12 @@
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;"></div>
+  </div>
+  <!-- Spinner End -->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white px-md-3 pb-1 border-bottom">
       <div class="container">
@@ -634,6 +653,29 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+        "use strict";
+
+        // Spinner
+        var spinner = function () {
+          var spinnerElement = document.getElementById('spinner');
+          if (spinnerElement) {
+            setTimeout(function () {
+              spinnerElement.classList.remove('show');
+            }, 1000);
+          }
+        };
+        spinner();
+
+        // Hide the spinner when the page finishes loading
+        window.addEventListener('load', function () {
+          var spinnerElement = document.getElementById('spinner');
+          if (spinnerElement) {
+            spinnerElement.style.display = 'none';
+          }
+        });
+
+
+
     $('#owl-carousel-1').owlCarousel({
       loop: true,
       margin: 10,
