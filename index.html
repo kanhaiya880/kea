@@ -97,6 +97,19 @@
     <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;"></div>
   </div>
   <!-- Spinner End -->
+
+  
+  <div class="container-fluid bg-dark py-1">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex text-white justify-content-md-end justify-content-lg-end justify-content-center ">
+          <img src="flag.jpg" alt="" width="34px"> &nbsp;&nbsp; &nbsp; &nbsp;
+          <span id="date"></span> &nbsp; |
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white px-md-3 pb-1 border-bottom">
       <div class="container">
@@ -652,6 +665,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- moment libray -->
+    
+    <script src="momentjs.com_downloads_moment.js"></script>
+    <script src="momentjs.com_downloads_moment-with-locales.js"></script>
   <script>
         "use strict";
 
@@ -719,6 +737,11 @@
     })
 
     AOS.init();
+
+    
+    let m=moment().format('MMMM Do YYYY');
+    document.getElementById('date').innerHTML=m;
+
   </script>
 </body>
 
