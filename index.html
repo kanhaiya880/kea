@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="divider.css">
   <link rel="stylesheet" href="course.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="spinner.css">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -53,19 +54,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
-    /* spinner */
-    #spinner {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .5s ease-out, visibility 0s linear .5s;
-      z-index: 99999;
-    }
-
-    #spinner.show {
-      transition: opacity .5s ease-out, visibility 0s linear 0s;
-      visibility: visible;
-      opacity: 1;
-    }
+ 
     /* service box css */
 
     .service-box .box {
@@ -103,9 +92,10 @@
   <div class="container-fluid bg-dark py-1">
     <div class="container">
       <div class="row">
-        <div class="d-flex text-white justify-content-end justify-content-lg-end">
-          <!-- <img src="flag.jpg" alt="" width="34px">  &nbsp; &nbsp; -->
-          <span id="date"></span> &nbsp; |
+        <div class="d-flex text-white justify-content-end justify-content-lg-end" style="font-size: 10px;">
+           
+          <span id="date" class="text-uppercase"></span> &nbsp; | &nbsp;
+          <span>CONATCT US : (+91) 9623394343</span>
         </div>
       </div>
     </div>
@@ -130,7 +120,7 @@
               <a class="nav-link" href="gallary.html">Gallery</a>
             </li>
             <li class="nav-item me-md-5">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item me-md-5">
               <a class="nav-link" href="#">Contact</a>
@@ -671,79 +661,8 @@
     
     <script src="momentjs.com_downloads_moment.js"></script>
     <script src="momentjs.com_downloads_moment-with-locales.js"></script>
-  <script>
-        "use strict";
+    <script src="main.js"></script>
 
-        // Spinner
-        var spinner = function () {
-          var spinnerElement = document.getElementById('spinner');
-          if (spinnerElement) {
-            setTimeout(function () {
-              spinnerElement.classList.remove('show');
-            }, 1000);
-          }
-        };
-        spinner();
-
-        // Hide the spinner when the page finishes loading
-        window.addEventListener('load', function () {
-          var spinnerElement = document.getElementById('spinner');
-          if (spinnerElement) {
-            spinnerElement.style.display = 'none';
-          }
-        });
-
-
-
-    $('#owl-carousel-1').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      navContainer: '.custom-nav', // Specify the navigation container
-
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      dots: true,
-      autoplay: true,
-
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 1
-        },
-        1000: {
-          items: 1
-        }
-      }
-    })
-
-    AOS.init();
-
-    
-    let m=moment().format('MMMM Do YYYY');
-    document.getElementById('date').innerHTML=m;
-
-  </script>
 </body>
 
 </html>
