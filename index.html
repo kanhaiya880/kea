@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="audio.css">
 
 
   <!-- javascript aos -->
@@ -75,6 +76,7 @@
         width: 100%;
       }
     }
+ 
   </style>
 
 </head>
@@ -196,6 +198,20 @@
     </div>
   </section>
 
+   <!-- audio -->
+<div class="audio-box">
+  <div class="custom-audio">
+    <audio id="myAudio" src="kea.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="playPauseButton"  class="custom-audio-button play"></button>
+    <div>
+        <button id="showAudioButton"></button>
+    </div>
+</div>
+</div>
+
+
   <!-- this related to services of kea -->
 
   <section>
@@ -252,6 +268,8 @@
     </div>
     </div>
   </section>
+
+ 
 
   <!-- features of kea -->
 
@@ -371,15 +389,16 @@
 
   <!-- english courses owls carousel -->
 
-  <section>
+  <section  class="py-4">
     <div class="container-fluid">
       <div class="container py-4">
         <div class="divider text-start">
           <div class="design-line">
             <yello> </yello>
+            <yello> </yello>
             <blue></blue>
           </div>
-          <span data-aos="fade-left">Courses</span>
+          <span data-aos="fade-left" >Courses</span>
         </div>
       </div>
       <div class="container py-4">
@@ -662,6 +681,7 @@
     <script src="momentjs.com_downloads_moment.js"></script>
     <script src="momentjs.com_downloads_moment-with-locales.js"></script>
     <script src="main.js"></script>
+    <script src="audio.js"></script>
 
 </body>
 

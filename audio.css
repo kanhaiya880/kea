@@ -1,0 +1,59 @@
+#audio-box{
+    position: absolute;
+
+}
+#showAudioButton{
+    width: 10px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+   
+}
+/* Example CSS for customizing the audio player */
+.custom-audio {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: -65px; /* Initially hide to the left */
+    transition: left 0.5s;
+    background-color: rgb(81, 96, 255);
+    overflow: hidden;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   
+}
+
+.audio-visible {
+    left: 0; /* Show the audio player */
+}
+
+/* Style for the circular play/pause button */
+.custom-audio-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    /* background-color: rgb(255, 0, 0); */
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.custom-audio-button.play::before {
+    content: "\25B6"; /* Unicode character for the play symbol */
+    font-size: 15px;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-left: 3px;
+}
+
+.custom-audio-button.pause::before {
+    content: "\II"; /* Unicode character for the pause symbol */
+    font-size: 15px;
+    color: white;
+    display: block;
+    text-align: center;
+}
