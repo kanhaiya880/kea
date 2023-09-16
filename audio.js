@@ -1,16 +1,7 @@
-$(document).ready(function() {
-    // Initially hide the audio player
-    $(".custom-audio").addClass("audio-visible");
-
-    // Toggle audio player visibility when clicking the button
-    $("#showAudioButton").click(function() {
-        $(".custom-audio").toggleClass("audio-visible");
-    });
-});
-
-// Audio control using JavaScript
 const audio = document.getElementById('myAudio');
 const playPauseButton = document.getElementById('playPauseButton');
+const showAudioButton = document.getElementById('showAudioButton');
+const customAudio = document.querySelector('.custom-audio');
 
 playPauseButton.addEventListener('click', function() {
     if (audio.paused) {
@@ -19,15 +10,19 @@ playPauseButton.addEventListener('click', function() {
         playPauseButton.classList.add('pause');
     } else {
         audio.pause();
+        
         playPauseButton.classList.remove('pause');
         playPauseButton.classList.add('play');
+        
         setTimeout(function () {
-            $("#showAudioButton").click();
-            
-
-    }, 500);
+    $("#showAudioButton").click();
+     }, 500);
         
     }
+});
+
+showAudioButton.addEventListener('click', function() {
+    customAudio.classList.toggle('audio-visible');
 });
 
 audio.addEventListener('ended', function() {

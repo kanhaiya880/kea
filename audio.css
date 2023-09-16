@@ -1,59 +1,70 @@
-#audio-box{
-    position: absolute;
+       /* Example CSS for customizing the audio player */
+        /* Show/hide button */
+        #showAudioButton {
+            right: 10px;
+            top: 50%;
+            /* transform: translateY(-50%); */
+            width: 16px;
+            padding-bottom: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0);
+            border: none;
+            cursor: pointer;
+            margin-left:0px;
+            
+        }
 
-}
-#showAudioButton{
-    width: 10px;
-    height: 40px;
-    background-color: rgba(255, 0, 0, 0);
-    border: none;
-   
-}
-/* Example CSS for customizing the audio player */
-.custom-audio {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    left: -65px; /* Initially hide to the left */
-    transition: left 0.5s;
-    background-color: rgb(81, 96, 255);
-    overflow: hidden;
-   border-top-right-radius: 10px;
-   border-bottom-right-radius: 10px;
-   
-}
+        /* Custom audio player container */
+        .custom-audio {
+            display: flex;
+            position: fixed;
+            align-items: center;
+            right: -90px; /* Initially hide to the right */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
+            width: 100px ;
+            height: 50px;
+            background-color: rgb(81, 96, 255);
+            overflow: hidden;
+            border-top-left-radius: 10px; /* Adjust if needed */
+            border-bottom-left-radius: 10px; /* Adjust if needed */
+            transition: right 0.5s;
+        }
 
-.audio-visible {
-    left: 0; /* Show the audio player */
-}
+        /* Styling for the play/pause button */
+        .custom-audio-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
 
-/* Style for the circular play/pause button */
-.custom-audio-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 40px;
-    /* background-color: rgb(255, 0, 0); */
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-}
+        /* Play button */
+        .custom-audio-button.play::before {
+            content: "\25B6"; /* Unicode character for the play symbol */
+            font-size: 15px;
+            color: white;
+            display: block;
+            text-align: center;
+            margin-left: 3px;
+           
+        }
 
-.custom-audio-button.play::before {
-    content: "\25B6"; /* Unicode character for the play symbol */
-    font-size: 15px;
-    color: white;
-    display: block;
-    text-align: center;
-    margin-left: 3px;
-}
+        /* Pause button */
+        .custom-audio-button.pause::before {
+            content: "\II"; /* Unicode character for the pause symbol */
+            font-size: 16px;
+            color: white;
+            display: block;
+            text-align: center;
+           
+        }
+        
+        .audio-visible {
+            right: 0px; /* Show the audio player */
+        }
 
-.custom-audio-button.pause::before {
-    content: "\II"; /* Unicode character for the pause symbol */
-    font-size: 15px;
-    color: white;
-    display: block;
-    text-align: center;
-}
