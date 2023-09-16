@@ -19,16 +19,19 @@
             display: flex;
             position: fixed;
             align-items: center;
+            border: 1px solid white;
             right: -90px; /* Initially hide to the right */
             top: 50%; /* Center vertically */
             transform: translateY(-50%);
             width: 100px ;
             height: 50px;
-            background-color: rgb(81, 96, 255);
+            background-image: linear-gradient(135deg, #FD6E6A 10%, #FFC600 100%);
             overflow: hidden;
             border-top-left-radius: 10px; /* Adjust if needed */
             border-bottom-left-radius: 10px; /* Adjust if needed */
             transition: right 0.5s;
+            z-index:2;
+        
         }
 
         /* Styling for the play/pause button */
